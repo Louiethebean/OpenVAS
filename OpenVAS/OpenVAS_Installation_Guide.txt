@@ -1,0 +1,128 @@
+# 🛠️ Step-by-Step OpenVAS (GVM) Installation Guide for Ubuntu 22.04+
+
+This guide provides a clear walkthrough for installing **OpenVAS**, part of the Greenbone Vulnerability Management (GVM) system, on Ubuntu.
+
+---
+
+## 📋 Prerequisites
+
+- Ubuntu 22.04 or later
+- At least 4 GB RAM, 2 CPU cores (recommended)
+- Root or sudo access
+- Internet connection
+
+---
+
+## 🚀 Installation Steps
+
+### 1. Update Your System
+
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+
+---
+
+### 2. Add OpenVAS PPA Repository
+
+```bash
+sudo apt install -y software-properties-common
+sudo add-apt-repository ppa:mrazavi/gvm
+sudo apt update
+```
+
+---
+
+### 3. Install GVM and OpenVAS
+
+```bash
+sudo apt install -y gvm
+```
+
+---
+
+### 4. Run Initial Setup
+
+```bash
+sudo gvm-setup
+```
+
+This process will:
+- Configure PostgreSQL
+- Generate certificates
+- Download feed data
+
+> ⚠️ Setup may take 15–30 minutes depending on your connection
+
+---
+
+### 5. Start GVM Services
+
+```bash
+sudo gvm-start
+```
+
+Check status:
+
+```bash
+sudo gvm-status
+```
+
+---
+
+### 6. Access the Web Interface
+
+Open your browser and go to:
+
+```
+https://localhost:9392
+```
+
+Or use your server’s IP:
+
+```
+https://<your-server-ip>:9392
+```
+
+> Default admin password will be shown at the end of `gvm-setup`
+
+---
+
+## 🔄 Feed Updates (Manual Sync)
+
+To manually update vulnerability feeds:
+
+```bash
+sudo greenbone-feed-sync --type GVMD_DATA
+sudo greenbone-feed-sync --type SCAP
+sudo greenbone-feed-sync --type CERT
+```
+
+Then restart GVM:
+
+```bash
+sudo gvm-stop && sudo gvm-start
+```
+
+---
+
+## 🧪 First Scan
+
+1. Log into the web UI
+2. Navigate to **Scans > Tasks**
+3. Create a new scan task
+4. Define your target (IP/domain)
+5. Choose a scan config (e.g., Full and Fast)
+6. Start the scan and monitor results
+
+---
+
+## 📚 References
+
+- [GVM Docs](https://greenbone.github.io/docs/)
+- [Community Forum](https://community.greenbone.net/)
+- [OpenVAS GitHub](https://github.com/greenbone)
+
+---
+
+✅ You are now ready to start vulnerability scanning with OpenVAS.
