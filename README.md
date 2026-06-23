@@ -105,6 +105,17 @@ sudo greenbone-feed-sync --type GVMD_DATA
 
 ---
 
+## 🎯 What I Learned / Skills Demonstrated
+
+- **Open-source vulnerability scanning stack** — how GVM/OpenVAS splits responsibilities across the scanner, the GVMD daemon, and the Greenbone web UI, versus a monolithic commercial tool.
+- **Feed management** — why NVT/SCAP/CERT feeds need regular syncing and how stale feed data quietly degrades scan accuracy.
+- **Cost-conscious tooling choices** — when an open-source scanner is the right call vs. a commercial license, and what tradeoffs (feed freshness, support, UI polish) come with that choice.
+- **Linux service troubleshooting** — diagnosing service startup issues during install rather than treating the install script as a black box.
+
+**Problem solved:** documented a working, free alternative to commercial vulnerability scanners for labs and small environments where licensing cost isn't justified.
+
+---
+
 ## 📚 References
 
 - [OpenVAS Installation Guide](https://greenbone.github.io/docs/)
