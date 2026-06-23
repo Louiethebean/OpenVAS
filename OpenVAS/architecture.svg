@@ -1,0 +1,33 @@
+<svg viewBox="0 0 800 260" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#5b6b7c"/>
+    </marker>
+  </defs>
+  <rect width="800" height="260" fill="#0f1620"/>
+  <text x="400" y="32" text-anchor="middle" fill="#e8edf2" font-size="18" font-weight="600">OpenVAS — Install &amp; Scan Flow</text>
+
+  <g font-size="13" fill="#0f1620">
+    <rect x="20" y="90" width="140" height="70" rx="10" fill="#80ed99"/>
+    <text x="90" y="120" text-anchor="middle" font-weight="600">Linux Host</text>
+    <text x="90" y="138" text-anchor="middle">Docker/Native</text>
+
+    <rect x="200" y="90" width="150" height="70" rx="10" fill="#38b000"/>
+    <text x="275" y="115" text-anchor="middle" font-weight="600" fill="#fff">GVM/OpenVAS</text>
+    <text x="275" y="133" text-anchor="middle" fill="#fff">Feed Sync</text>
+
+    <rect x="390" y="90" width="150" height="70" rx="10" fill="#007200"/>
+    <text x="465" y="115" text-anchor="middle" font-weight="600" fill="#fff">Scanner</text>
+    <text x="465" y="133" text-anchor="middle" fill="#fff">NVT checks</text>
+
+    <rect x="580" y="90" width="200" height="70" rx="10" fill="#004b23"/>
+    <text x="680" y="115" text-anchor="middle" font-weight="600" fill="#fff">Greenbone UI</text>
+    <text x="680" y="133" text-anchor="middle" fill="#fff">Reports · Findings</text>
+  </g>
+
+  <line x1="160" y1="125" x2="198" y2="125" stroke="#5b6b7c" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="350" y1="125" x2="388" y2="125" stroke="#5b6b7c" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="540" y1="125" x2="578" y2="125" stroke="#5b6b7c" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="400" y="210" text-anchor="middle" fill="#8a99a8" font-size="12">Install → sync vulnerability feeds → configure target/policy → launch scan → review report</text>
+</svg>

@@ -1,6 +1,10 @@
 # 🛡️ OpenVAS Vulnerability Scanner Guide
 
+![License](https://img.shields.io/badge/license-MIT-blue) ![Platform](https://img.shields.io/badge/platform-Linux-orange) ![Tool](https://img.shields.io/badge/tool-OpenVAS%20%2F%20GVM-2e7d32)
+
 This repository provides a complete installation and configuration guide for **OpenVAS**, the open-source vulnerability scanner component of **Greenbone Vulnerability Management (GVM)**.
+
+![Architecture](./architecture.svg)
 
 ---
 
