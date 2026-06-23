@@ -117,7 +117,7 @@ Pull requests and issue reports are welcome. Feel free to share improvements or 
 
 ## 📄 License
 
-This documentation is licensed under the MIT License. See [LICENSE] for more info.
+This documentation is licensed under the MIT License. See [LICENSE](./MIT%20License.txt) for more info.
 
 ---
 
