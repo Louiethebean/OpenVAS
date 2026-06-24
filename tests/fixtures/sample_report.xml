@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<report>
+  <results>
+    <result>
+      <name>SSL/TLS: Deprecated TLSv1.0 and TLSv1.1 Protocol Detection</name>
+      <host>192.168.1.10</host>
+      <port>443/tcp</port>
+      <severity>5.3</severity>
+      <nvt>
+        <refs>
+          <ref type="cve" id="CVE-2011-3389"/>
+        </refs>
+      </nvt>
+    </result>
+    <result>
+      <name>SSL/TLS: Deprecated TLSv1.0 and TLSv1.1 Protocol Detection</name>
+      <host>192.168.1.10</host>
+      <port>8443/tcp</port>
+      <severity>5.3</severity>
+      <nvt>
+        <refs>
+          <ref type="cve" id="CVE-2011-3389"/>
+        </refs>
+      </nvt>
+    </result>
+    <result>
+      <name>Apache Log4j Remote Code Execution Vulnerability (Log4Shell)</name>
+      <host>192.168.1.22</host>
+      <port>8080/tcp</port>
+      <severity>10.0</severity>
+      <nvt>
+        <refs>
+          <ref type="cve" id="CVE-2021-44228"/>
+        </refs>
+      </nvt>
+    </result>
+    <result>
+      <name>ICMP Timestamp Detection</name>
+      <host>192.168.1.10</host>
+      <port>general/icmp</port>
+      <severity>0.0</severity>
+      <nvt>
+        <refs/>
+      </nvt>
+    </result>
+  </results>
+</report>

@@ -93,6 +93,30 @@ https://localhost:9392
 
 ---
 
+## Tooling: GVM Report Parser
+
+`scripts/parse_gvm_report.py` turns a raw GVM/OpenVAS XML report export into a deduplicated, severity-ranked Markdown or CSV summary.
+
+```bash
+python scripts/parse_gvm_report.py path/to/report.xml --min-severity 7.0 --format md
+```
+
+What it does:
+- Parses every `<result>` in the exported report
+- Deduplicates findings that repeat across multiple ports on the same host (the same vulnerability showing up 5 times because 5 ports share it shouldn't count as 5 separate risks)
+- Buckets CVSS scores into Critical/High/Medium/Low/Log bands and prints a histogram
+- Extracts CVE references per finding
+- Outputs Markdown for a quick triage doc, or CSV for a tracker/spreadsheet
+
+Run the test suite (uses a bundled sample report, no live GVM instance required):
+
+```bash
+pip install pytest
+pytest tests/
+```
+
+---
+
 ## Updating Feeds
 
 To keep vulnerability data current:
